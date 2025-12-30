@@ -1,0 +1,22 @@
+[package]
+authors = ["swz <contact@swz.works>"]
+edition = "2024"
+name = "javascript-interface"
+version = "0.1.0"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+napi = "3.0.0"
+napi-derive = "3.0.0"
+
+[build-dependencies]
+napi-build = "2"
+planus-translation = { git = "https://github.com/swz-git/planus", rev = "a0b1fbf" }
+planus-types = { git = "https://github.com/swz-git/planus", rev = "a0b1fbf" }
+eyre = "0.6.12"
+
+[profile.release]
+lto = true
+strip = "symbols"

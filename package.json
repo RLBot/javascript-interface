@@ -1,0 +1,55 @@
+{
+  "name": "rlbot",
+  "version": "1.0.0",
+  "description": "Javascript interface for the RLBot v5 api.",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/napi-rs/package-template.git"
+  },
+  "license": "MIT",
+  "browser": "browser.js",
+  "keywords": [
+    "RLBot",
+    "interface",
+    "RLBot interface",
+    "rlbot-js",
+    "napi-rs"
+  ],
+  "files": [
+    "index.d.ts",
+    "index.js",
+    "browser.js"
+  ],
+  "napi": {
+    "binaryName": "javascript-interface",
+    "targets": [
+      "x86_64-pc-windows-msvc",
+      "x86_64-apple-darwin",
+      "x86_64-unknown-linux-gnu",
+      "aarch64-unknown-linux-gnu",
+      "aarch64-apple-darwin"
+    ]
+  },
+  "engines": {
+    "node": ">= 10.23.0 < 11 || >= 12.19.0 < 13 || >= 14.12.0 < 15 || >= 15.0.0"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "_prepublishOnly": "napi prepublish -t npm",
+    "_preversion": "napi build --platform && git add .",
+    "_version": "napi version"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^3.2.0",
+    "@oxc-node/core": "^0.0.35",
+    "typescript": "^5.9.2"
+  },
+  "packageManager": "pnpm@10.12.1"
+}

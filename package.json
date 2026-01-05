@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "description": "TypeScript/JavaScript interface for the RLBot v5 api.",
   "type": "module",
-  "main": "src/index.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "license": "MIT",
   "keywords": [
     "RLBot",
@@ -11,6 +12,7 @@
     "rlbot-js"
   ],
   "scripts": {
+    "prepare": "pnpm build",
     "build": "rolldown -c",
     "check": "tsgo --noEmit"
   },

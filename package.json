@@ -1,0 +1,28 @@
+{
+  "name": "rlbot",
+  "version": "0.1.0",
+  "description": "TypeScript/JavaScript interface for the RLBot v5 api.",
+  "type": "module",
+  "main": "src/index.ts",
+  "license": "MIT",
+  "keywords": [
+    "RLBot",
+    "RLBot interface",
+    "rlbot-js"
+  ],
+  "scripts": {
+    "flatc-linux": "echo TODO: fix flatc-linux command",
+    "build": "rolldown -c",
+    "check": "tsgo --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "@typescript/native-preview": "7.0.0-dev.20260104.1",
+    "rolldown": "1.0.0-beta.58",
+    "rolldown-plugin-dts": "^0.20.0"
+  },
+  "packageManager": "pnpm@10.12.1",
+  "dependencies": {
+    "flatbuffers": "^25.9.23"
+  }
+}

@@ -11,7 +11,7 @@ export class RLBotConnection {
   private socket: net.Socket;
   private packetBuf: util.ValidCoreMessage[] = [];
   private flatbuffersBuilder: flatbuffers.Builder = new flatbuffers.Builder();
-  private internalEvents: EventEmitter = new EventEmitter();
+  internalEvents: EventEmitter = new EventEmitter();
 
   constructor(
     host: string | undefined = undefined,

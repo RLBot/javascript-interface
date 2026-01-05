@@ -7,4 +7,5 @@ export { flat, util, RLBotConnection };
 // TODO: Agents
 // TODO: Rendering utils
 // TODO: MatchConfig utils
-// TODO: Consider planus instead, flatc+ts=💩
+// TODO: Add build process for flat folder (stuff is currently tweaked a bit 🥴)
+// TODO: Consider planus instead ^, flatc+ts=💩

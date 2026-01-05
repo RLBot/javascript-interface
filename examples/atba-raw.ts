@@ -15,6 +15,8 @@ let controllableInfo: flat.ControllableInfo | undefined = undefined;
 while (true) {
   let packet = await conn.recvPacket();
 
+  if (packet instanceof flat.DisconnectSignal) break;
+
   if (packet instanceof flat.ControllableTeamInfo) {
     if (packet.controllables.length != 1) {
       throw "Bot doesn't support hivemind";
